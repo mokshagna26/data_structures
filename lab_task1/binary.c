@@ -1,26 +1,26 @@
-#include &lt;stdio.h&gt;
+#include<stdio.h>
 void printBinary(int num) {
 if (num == 0) {
-printf(&quot;0&quot;);
+printf("0");
 return;
 }
 char binary[32];
 int i = 0;
-while (num &gt; 0) {
-binary[i] = (num % 2) + &#39;0&#39;;
+while (num >0) {
+binary[i] = (num % 2) +'0';
 num = num/2;
 i++;
 }
-for (int j = i - 1; j &gt;= 0; j--) {
-printf(&quot;%c&quot;, binary[j]);
+for (int j = i - 1; j >= 0; j--) {
+printf("%c", binary[j]);
 }
 }
 int main() {
 int number;
-printf(&quot;Enter a number: &quot;);
-scanf(&quot;%d&quot;, &amp;number);
-printf(&quot;Binary representation: &quot;);
+printf("Enter a number:" );
+scanf("%d",number);
+printf("Binary representation:");
 printBinary(number);
-printf(&quot;\n&quot;);
+printf("\n");
 return 0;
 }

@@ -1,0 +1,136 @@
+Lab Task-2
+
+1.	Create a structure called “Student” with members name, age, and total marks. Write a C program to input data for two students, display their information, and find the Average of total marks.
+CODE :
+#include <stdio.h>
+Struct Student {
+    Char name[50];
+    Int age;
+    Float totalMarks;
+};
+Int main() {
+    Struct Student s1, s2;
+    Float average;
+    Printf(“Enter name, age, and marks of student 1: “);
+    Scanf(“%s %d %f”, s1.name, &s1.age, &s1.totalMarks);
+  Printf(“Enter name, age, and marks of student 2: “);
+    Scanf(“%s %d %f”, s2.name, &s2.age, &s2.totalMarks);
+    Average = (s1.totalMarks + s2.totalMarks) / 2;
+    Printf(“\nStudent 1: %s, Age: %d, Marks: %.2f”, s1.name, s1.age, s1.totalMarks);
+    Printf(“\nStudent 2: %s, Age: %d, Marks: %.2f”, s2.name, s2.age, s2.totalMarks);
+    Printf(“\nAverage Marks: %.2f\n”, average);
+   Return 0;
+} 
+commit changes
+
+2 .Design a structure named “Car” to store details like car ID, model, and rental rate per
+Day. Write a C program to input data for three cars, calculate the total rental cost for a specified number of days, and display the results.
+CODE : 
+#include <stdio.h>
+Struct Car {
+    Int carID;
+    Char model[50];
+    Float rentalRatePerDay;
+};
+
+Int main() {
+    Struct Car cars[3];
+    Int days;
+    Printf(“Enter details of 3 cars:\n”);
+    For (int I = 0; I < 3; i++) {
+        Printf(“\nCar %d:\n”, I + 1);
+        Printf(“Car ID: “);
+        Scanf(“%d”, &cars[i].carID);
+        Printf(“Model: “);
+        Scanf(“ %[^\n]s”, cars[i].model); 
+        Printf(“Rental Rate per Day: “);
+        Scanf(“%f”, &cars[i].rentalRatePerDay);
+    }
+    Printf(“\nEnter the number of rental days: “);
+    Scanf(“%d”, &days);
+    Printf(“\nRental Costs:\n”);
+    For (int I = 0; I < 3; i++) {
+        Printf(“Car ID: %d, Model: %s, Total Cost: %.2f\n”,
+               Cars[i].carID, cars[i].model, cars[i].rentalRatePerDay * days);
+    }
+
+    Return 0;
+}
+
+commit changes
+
+
+
+
+
+
+3.Create a structure named Complex to represent a complex number with real and
+        Imaginary parts. Write a C program to add and multiply two complex numbers.
+CODE : 
+#include <studio.h>
+Struct Complex {
+    Float real;
+    Float imag;
+};
+
+int main() {
+    Struct Complex c1, c2, sum, product;
+    Printf(“Enter the real and imaginary parts of the first complex number: “);
+    Scanf(“%f %f”, &c1.real, &c1.imag);
+    Printf(“Enter the real and imaginary parts of the second complex number: “);
+    Scanf(“%f %f”, &c2.real, &c2.imag);
+    Sum.real = c1.real + c2.real;
+    Sum.imag = c1.imag + c2.imag;
+    Product.real = (c1.real * c2.real) – (c1.imag * c2.imag);
+    Product.imag = (c1.real * c2.imag) + (c1.imag * c2.real);
+    Printf(“\nSum: %.2f + %.2fi”, sum.real, sum.imag);
+    Printf(“\nProduct: %.2f + %.2fi\n”, product.real, product.imag);
+
+    Return 0;
+}
+commit changes
+
+
+4.Write a program in C to store and print the information of N employees using
+Dynamic memory allocation and structures.
+
+CODE: 
+#include <stdio.h>
+#include <stdlib.h>
+
+Struct Employee {
+    Int id;
+    Char name[50];
+    Float salary;
+};
+
+Int main() {
+    Struct Employee *employees;
+    Int n;
+
+    Printf(“Enter the number of employees: “);
+    Scanf(“%d”, &n);
+
+    Employees = malloc(n * sizeof(struct Employee));
+
+    For (int I = 0; I < n; i++) {
+        Printf(“\nEnter details for Employee %d:\n”, I + 1);
+        Printf(“ID: “);
+        Scanf(“%d”, &employees[i].id);
+        Printf(“Name: “);
+        Scanf(“ %[^\n]”, employees[i].name);
+        Printf(“Salary: “);
+        Scanf(“%f”, &employees[i].salary);
+    }
+
+    Printf(“\nEmployee Details:\n”);
+    For (int I = 0; I < n; i++) {
+        Printf(“ID: %d, Name: %s, Salary: %.2f\n”, employees[i].id, employees[i].name, employees[i].salary);
+    }
+
+    Free(employees);
+    Return 0;
+}
+
+commit changes
+
